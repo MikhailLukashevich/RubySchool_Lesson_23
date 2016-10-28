@@ -20,5 +20,6 @@ post '/enrol' do
 	@phone = params[:phone]
 	@data_time = params[:data_time]
 	@barber = params[:barber]
-	erb "OK!, #{@user_name}, #{@phone}, #{@data_time}, #{@barber}"
+	@color = params[:color]
+	erb "OK!, #{@user_name}, #{@phone}, #{@data_time}, #{@barber}, #{@color}"
 end
