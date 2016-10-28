@@ -19,8 +19,6 @@ post '/enrol' do
 	@user_name = params[:user_name]
 	@phone = params[:phone]
 	@data_time = params[:data_time]
-	f = File.open './public/users.txt', 'a'
-	f.write "Name: #{@user_name}, phone: #{@phone}, data and time: #{@data_time}"
-	f.close
-	erb :enrol
+	@barber = params[:barber]
+	erb "OK!, #{@user_name}, #{@phone}, #{@data_time}, #{@barber}"
 end
